@@ -1,0 +1,28 @@
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+myvenv/
+venv/
+.env
+
+# Flask uploads
+uploads/
+
+# Mac/Windows metadata
+.DS_Store
+Thumbs.db
+
+# IDE/editor metadata
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# PyCharm caches
+.idea/
+*.iml
