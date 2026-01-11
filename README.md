@@ -8,7 +8,7 @@ This Flask-based demo bundles three medical prediction flows (brain tumor image 
 final_med_application/
 ├── models/                # Serialized ML artifacts (.h5, .pkl, .sav)
 ├── static/                # Shared styles, scripts, and assets
-├── templates/             # HTML views (home, brain tumor form, model info, etc.)
+├── templetes/             # HTML views (home, brain tumor form, model info, etc.)
 ├── uploads/               # Runtime upload directory (ignored)
 ├── .gitignore             # Ignored artifacts
 ├── Brain_Tumor_Prediction_Using_DL.ipynb
@@ -69,4 +69,5 @@ Optional enhancements:
 - Keep `uploads/` empty in the repo; it is listed in `.gitignore` because it accumulates user-submitted files.
 - The heart disease model was trained with scikit-learn 1.0.2; loading it with newer versions may emit an `InconsistentVersionWarning`. Re-training with 1.3.2 and re-serializing (or pinning to 1.0.2) avoids the warning.
 - The TensorFlow brain model expects 150×150 images; the app already resizes and converts to BGR/GRAYSCALE as needed.
+
 
