@@ -6,18 +6,18 @@ This Flask-based demo bundles three medical prediction flows (brain tumor image 
 
 ```
 final_med_application/
-├── app.py                  # Flask routes, uploads, and prediction logic
-├── requirements.txt        # Runtime dependencies (Flask, TensorFlow, sklearn, etc.)
+├── models/                # Serialized ML artifacts (.h5, .pkl, .sav)
+├── static/                # Shared styles, scripts, and assets
+├── templates/             # HTML views (home, brain tumor form, model info, etc.)
+├── uploads/               # Runtime upload directory (ignored)
+├── .gitignore             # Ignored artifacts
+├── Brain_Tumor_Prediction_Using_DL.ipynb
+├── Diabetes_Prediction_Using_ML.ipynb
+├── Heart_Disease_Prediction_Using_ML.ipynb
 ├── Procfile               # Production entrypoint for gunicorn
 ├── README.md              # This document
-├── .gitignore             # Ignored artifacts
-├── templates/             # HTML views (home, brain tumor form, model info, etc.)
-├── static/                # Shared styles, scripts, and assets
-├── models/                # Serialized ML artifacts (.h5, .pkl, .sav)
-├── uploads/               # Runtime upload directory (ignored)
-├── Brain_Tumor_Prediction_Using_DL.ipynb
-├── Heart_Disease_Prediction_Using_ML.ipynb
-├── Diabetes_Prediction_Using_ML.ipynb
+├── app.py                  # Flask routes, uploads, and prediction logic
+├── requirements.txt        # Runtime dependencies (Flask, TensorFlow, sklearn, etc.)
 └── ...
 ```
 
@@ -69,3 +69,4 @@ Optional enhancements:
 - Keep `uploads/` empty in the repo; it is listed in `.gitignore` because it accumulates user-submitted files.
 - The heart disease model was trained with scikit-learn 1.0.2; loading it with newer versions may emit an `InconsistentVersionWarning`. Re-training with 1.3.2 and re-serializing (or pinning to 1.0.2) avoids the warning.
 - The TensorFlow brain model expects 150×150 images; the app already resizes and converts to BGR/GRAYSCALE as needed.
+
